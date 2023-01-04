@@ -6,7 +6,7 @@ from .serializers import UserSerializer
 # from rest_framework.decorators import api_view
 
 class UserList(APIView):
-    def get(self, request, pk=None):
+    def get(self,request, pk=None):
         if pk:
             person=UsersData.objects.filter(id=pk)
             serializer = UserSerializer(person,many=True)
